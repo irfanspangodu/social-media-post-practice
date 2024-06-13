@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #798cae;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+#post {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1019607843);
+    width: 400px;
+}
+
+#post div.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 20px;
+    cursor: default;
+}
+
+#post div.user-info div.left {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+#post div.user-info div.left img.profile-pic {
+    width: 50px;
+    height: 50px;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+#post div.user-info div.left div span.user-name {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#post div.user-info div.left div span.post-time {
+    font-size: 14px;
+    color: #666;
+}
+
+#post div.user-info div.right div {
+    transform: rotate(90deg);
+}
+
+#post div.user-info div.right div span.action-icon {
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 600;
+    color: #222;
+}
+
+#post div.user-info div.right div.post-options-dropdown {
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    display: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#post div.user-info div.right div.post-options-dropdown.show {
+    display: block;
+}
+
+#post div.user-info div.right div.post-options-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#post div.user-info div.right div.post-options-dropdown ul li {
+    margin-bottom: 10px;
+}
+
+#post div.user-info div.right div.post-options-dropdown ul li button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    cursor: pointer;
+}
+
+#post div.user-info div.right div.post-options-dropdown ul li button:hover {
+    background-color: #eee;
+}
+
+#post div.post-content {
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+}
+
+#post div.post-content img.post-image {
+    width: 100%;
+    display: block;
+}
+
+#post div.post-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#post div.post-actions div span.action-icon {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#post div.post-actions div.count {
+    cursor: default;
+}
+
+#post div.post-actions div.count span.comment-count {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+}
+
+#post div.comment-section {
+    padding: 20px;
+}
+
+#post div.comment-section div.top {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+#post div.comment-section div.top img.profile-pic {
+    width: 35px;
+    height: 35px;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+#post div.comment-section div.top input.comment-input {
+    width: 90%;
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 50px;
+}
+
+#post div.comment-section div.top input.comment-input::-moz-placeholder {
+    color: #666;
+}
+
+#post div.comment-section div.top input.comment-input::placeholder {
+    color: #666;
+}
+
+#post div.comment-section div.comment-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#post div.comment-section div.comment-buttons button.comment-button {
+    background-color: #798cae;
+    transition: all 0.1s ease-in;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#post div.comment-section div.comment-buttons button.comment-button:hover {
+    background-color: #3b5998;
+}
+
+#post div.comment-section div.comment-buttons div span.action-icon {
+    cursor: pointer;
+    margin-right: 5px;
+    filter: grayscale(100%) opacity(0.3);
+    transition: all 0.1s ease-in;
+}
+
+#post div.comment-section div.comment-buttons div span.action-icon:hover {
+    filter: grayscale(100%) opacity(0.9);
+}
+
+.animate-in {
+    animation: animateIn 0.5s forwards;
+}
+
+@keyframes animateIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.animate {
+    animation: animate 0.5s forwards;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.user-profile-modal {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #3160c5;
+    color: #fff;
+}
+
+.comment-list {
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: 400;
+    color: #666;
+    opacity: .9;
+    line-height: 1.9em;
+    width: 300px;
+    margin: 0 auto;
+}
