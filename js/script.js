@@ -71,7 +71,7 @@ function updateCommentList() {
     });
 }
 
-postImage.src = "/images/post-image.jpg";
+postImage.src = "images/post-image.jpg";
 
 updateCommentList();
 
