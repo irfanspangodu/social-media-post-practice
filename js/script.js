@@ -106,5 +106,3 @@ document.querySelector(".close-modal").addEventListener("click", () => {
     userProfileModal.style.display = "none";
     userProfileModal.classList.remove("animate-in");
 });
-
-
