@@ -5,7 +5,6 @@ const commentInput = document.querySelector(".comment-input");
 const commentSubmitButton = document.querySelector(".comment-button");
 const commentCountElement = document.querySelector(".comment-count");
 const commentListElement = document.querySelector(".comment-list");
-const postImage = document.querySelector(".post-image");
 
 let isLiked = false;
 let isHearted = false;
@@ -70,8 +69,6 @@ function updateCommentList() {
         commentListElement.appendChild(commentElement);
     });
 }
-
-postImage.src = "images/post-image.jpg";
 
 updateCommentList();
 
