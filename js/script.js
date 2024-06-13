@@ -20,7 +20,7 @@ commentSubmitButton.addEventListener("click", submitComment);
 
 function toggleLike() {
     if (isLiked) {
-        likeButton.textContent = "👍";BR6s4YkqIHWVEZf389
+        likeButton.textContent = "👍";
         isLiked = false;
     } else {
         likeButton.textContent = "🖐";
