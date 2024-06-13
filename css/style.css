@@ -200,12 +200,7 @@ body {
 #post div.comment-section div.comment-buttons div span.action-icon {
     cursor: pointer;
     margin-right: 5px;
-    filter: grayscale(100%) opacity(0.3);
-    transition: all 0.1s ease-in;
-}
-
-#post div.comment-section div.comment-buttons div span.action-icon:hover {
-    filter: grayscale(100%) opacity(0.9);
+    filter: grayscale(100%);
 }
 
 .animate-in {
